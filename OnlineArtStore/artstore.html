@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Artwork Store </title>
+  <link rel="stylesheet" href="artstore.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  
+  <header class="navbar">
+    <div class="logo"> Helen Art <span> Store </span></div>
+    <nav>
+      <a  href="#">Home</a>
+      <a  href="#">Gallery</a>
+      <a  href="#">About</a>
+      <a  href="#">Contact</a>
+      <a class = "cart" onclick= add_to_cart()> 
+        <ion-icon class = "cart-icon" name="cart-outline"></ion-icon> 
+      </a>
+    </nav>
+    <div class="register">
+  <button class="login" onclick=login()> Login </button>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <h1>Discover African Artistry</h1>
+    <p> Original paintings, sculptures, and prints </p>
+    <a href="#gallery" class="btn"> Explore Gallery </a>
+  </section>
+
+  <div class="art-card"></div>
+  
+  <footer class="footer">
+    <p> © 2025 ArtStore. All rights reserved. </p>
+    <div class="socials">
+      <a href="https://instagram.com"> <ion-icon name="logo-instagram"></ion-icon> 
+        Instagram
+      </a>
+      <a href="https://facebook.com"> <ion-icon name="logo-facebook"></ion-icon>
+        Facebook
+      </a>
+      <a href="https://twitter.com"> <ion-icon name="logo-twitter"></ion-icon>
+        Twitter 
+      </a>
+    </div>
+  </footer>
+  <script src="../sign-in/signin.js"></script>
+  <script src="../sign-in/sign-up.js"></script>
+  <script src="../cart/cart.js"></script>
+  <script src="artwork.js"></script>
+</body>
+</html>
