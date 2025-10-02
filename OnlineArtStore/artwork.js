@@ -1,4 +1,4 @@
-const ART_URL = "https://api.artic.edu/api/v1/artworks?limit=21";
+const ART_URL = "https://api.artic.edu/api/v1/artworks?limit=20";
 const artCard = document.querySelector(".art-card");
 
 // function add_to_cart(){

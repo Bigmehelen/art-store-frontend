@@ -11,18 +11,18 @@
 <body>
   
   <header class="navbar">
-    <div class="logo"> Helen Art <span> Store </span></div>
-    <nav>
-      <a  href="#">Home</a>
-      <a  href="#">Gallery</a>
-      <a  href="#">About</a>
-      <a  href="#">Contact</a>
+    <div class="log"> Helen Art <span> Store </span></div>
+    <div class = "nav-anchor">
+      <a  href="#"> Home </a>
+      <a  href="#"> Gallery </a>
+      <a  href="#"> About </a>
+      <a  href="#"> Contact </a>
       <a class = "cart" onclick= add_to_cart()> 
         <ion-icon class = "cart-icon" name="cart-outline"></ion-icon> 
       </a>
-    </nav>
+    </div>
     <div class="register">
-  <button class="login" onclick=login()> Login </button>
+  <button class="login" > Logout</button>
     </div>
   </header>
   
@@ -33,21 +33,91 @@
   </section>
 
   <div class="art-card"></div>
-  
-  <footer class="footer">
-    <p> © 2025 ArtStore. All rights reserved. </p>
-    <div class="socials">
-      <a href="https://instagram.com"> <ion-icon name="logo-instagram"></ion-icon> 
-        Instagram
-      </a>
-      <a href="https://facebook.com"> <ion-icon name="logo-facebook"></ion-icon>
-        Facebook
-      </a>
-      <a href="https://twitter.com"> <ion-icon name="logo-twitter"></ion-icon>
-        Twitter 
-      </a>
+
+<footer class="footer-wrap">
+  <div class="footer" role="contentinfo">
+
+   
+    <div class="brand" id="footer-heading">
+      <div class="logo" aria-hidden="true">
+       
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6ee7b7"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+          <rect x="1.5" y="1.5" width="21" height="21" rx="5" stroke="url(#g)" stroke-width="1.6"/>
+          <path d="M7 12c1.5-2 5-4 8-2" stroke="url(#g)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <h3> Helen Art Store </h3>
+        <p class="muted">Crafting delightful UI and strong backend systems. Design, Build, Ship.</p>
+        <p class="muted" style="margin-top:10px;font-size:0.85rem">Contact: <a href="mailto:hello@example.com" style="color:var(--accent);text-decoration:none">helenartstore@gmail.com</a></p>
+      </div>
     </div>
-  </footer>
+
+   
+    <nav-foot class="col" aria-label="Quick links">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Integrations</a></li>
+        <li><a href="#">Changelog</a></li>
+      </ul>
+    </nav-foot>
+
+    
+    <div class="col" aria-label="Resources">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+   
+    <div class="newsletter" aria-labelledby="newsletter-title">
+      <h4 id="newsletter-title">Subscribe to our newsletter</h4>
+      <p>Insights, launches and design + engineering tips — delivered monthly.</p>
+      <form class="subscribe" id="newsletter-form" onsubmit="return subscribeHandler(event)" aria-label="Subscribe to newsletter">
+        <label for="email" class="sr-only">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="email@gmail.com" required />
+        <button type="submit" aria-label="Subscribe">Subscribe</button>
+      </form>
+      <p class="muted" style="margin-top:10px;font-size:0.82rem">We respect your privacy — unsubscribe anytime.</p>
+    </div>
+
+  </div>
+
+  >
+    <div class="footer-bottom">
+      <div class="muted"> © <span id="year"></span> Helen Art Store — All rights reserved.</div>
+
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="socials" aria-label="Social links">
+          
+          <a href="#" aria-label="Twitter" title="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7.5c-.6.3-1.3.5-2 .6.7-.4 1.2-1 1.4-1.7-.6.4-1.4.7-2.2.8A3.6 3.6 0 0012 10.9c0 .3 0 .6.1.8C8.4 11.6 5.3 9.9 3 7.1c-.3.4-.5.8-.5 1.4 0 1 .6 1.9 1.5 2.4-.6 0-1.2-.2-1.7-.5v.1c0 1.6 1.1 3 2.6 3.3-.4.1-.8.1-1.3.1-.3 0-.6 0-.9-.1.6 1.8 2.3 3 4.3 3.1A7.3 7.3 0 012 19.6 10.3 10.3 0 008.8 21c6.3 0 9.7-5.2 9.7-9.7v-.4c.7-.5 1.3-1.1 1.8-1.8-.6.3-1.3.6-2 .7z" fill="currentColor"/></svg>
+          </a>
+          
+          <a href="#" aria-label="GitHub" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.5v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.4-1.2-1.8-1.2-1.8-1-.7.1-.7.1-.7 1.1.1 1.8 1.1 1.8 1.1 1 .1 1.6-.7 2-1.2.1-.7.4-1.3.8-1.6-2.7-.3-5.6-1.3-5.6-6a4.7 4.7 0 011.2-3.3 4.4 4.4 0 01.1-3.3s1-.3 3.4 1.2a11.6 11.6 0 016.2 0C18.2 5 19.2 5.3 19.2 5.3a4.4 4.4 0 01.1 3.3 4.7 4.7 0 011.2 3.3c0 4.7-2.9 5.7-5.6 6 .4.3.7 1 .7 2v3c0 .3.2.6.8.5A12 12 0 0012 .5z" fill="currentColor"/></svg>
+          </a>
+          
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.98 3.5a2.29 2.29 0 11.01 0zM3.5 8.5h3v11h-3v-11zM9.5 8.5h2.9v1.5h.1c.4-.7 1.5-1.5 3.1-1.5 3.3 0 3.9 2.2 3.9 5.1v6.9h-3v-6.1c0-1.5 0-3.4-2.2-3.4-2.2 0-2.5 1.7-2.5 3.3v6.2h-3v-11z" fill="currentColor"/></svg>
+          </a>
+        </div>
+
+        <a href="#top" class="to-top" id="toTop" aria-label="Back to top" title="Back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5l7 7h-4v7h-6v-7H5l7-7z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
   <script src="../sign-in/signin.js"></script>
   <script src="../sign-in/sign-up.js"></script>
   <script src="../cart/cart.js"></script>
